@@ -65,7 +65,6 @@ col1, col2= st.columns([3,3])
 
 with col1:
   
-    st.markdown("                                                                              ") 
     if res_init.status_code == 200:
                 ### Display the image returned by the API
         st.image(res_init.content)
@@ -73,7 +72,8 @@ with col1:
         st.markdown("**Oops**, something went wrong 😓 Please try again.")
         print(res_init.status_code, res_init.content)
 
- with col2:
+with col2:
+  
     if res.status_code == 200:
                 ### Display the image returned by the API
         st.image(res.content)
