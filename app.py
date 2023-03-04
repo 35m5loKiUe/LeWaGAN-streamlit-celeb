@@ -6,7 +6,7 @@ import random
 import requests
 
 '''
-# Le WaGAN
+# Le WaGAN - Célébrités
 '''
 
 #load_dotenv()
