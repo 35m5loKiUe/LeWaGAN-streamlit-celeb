@@ -67,7 +67,7 @@ with col1:
 
 with col2:
   
-  
+    st.markdown("                                                                              ") 
     if res_init.status_code == 200:
                 ### Display the image returned by the API
         st.image(res_init.content)
