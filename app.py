@@ -55,7 +55,7 @@ params_init = {'v1':1,
           'seed':seed
 }
 
-url = 'https://lewagandocker-vl3hfwrb3a-ew.a.run.app/image?'
+url = 'https://lewagan-docker-celeb-vl3hfwrb3a-ez.a.run.app/image?'
 
 res = requests.get(url, params=params_api)
 res_init = requests.get(url, params=params_init)
