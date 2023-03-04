@@ -61,7 +61,7 @@ url = 'https://lewagan-docker-celeb-vl3hfwrb3a-ez.a.run.app/image?'
 res = requests.get(url, params=params_api)
 res_init = requests.get(url, params=params_init)
 
-col1, col2, col3, col4, col5 = st.columns(5)
+col1, col2, col3 = st.columns(3)
 with col1:
     st.markdown(" ")
 
@@ -72,12 +72,9 @@ with col2:
     else:
         st.markdown("**Oops**, something went wrong 😓 Please try again.")
         print(res_init.status_code, res_init.content)
-
-with col3:
+       
     st.markdown(" ")
-
-
-with col4:
+    
     if res.status_code == 200:
                 ### Display the image returned by the API
         st.image(res.content, caption="Image générée par l'AI, avec les vecteurs propres associés ☝️")
@@ -85,5 +82,7 @@ with col4:
         st.markdown("**Oops**, something went wrong 😓 Please try again.")
         print(res.status_code, res.content)
 
-with col5:
+
+with col3:
     st.markdown(" ")
+
