@@ -23,15 +23,16 @@ with st.sidebar:
 
 
     # initializing with a random number
-    if "rn" not in st.session_state:
-        st.session_state["rn"] = random.randint(1,100)
+    #if "rn" not in st.session_state:
+    #    st.session_state["rn"] = random.randint(1,100)
 
-    def change_number():
-        st.session_state["rn"] = random.randint(1,100)
-        return
+    #def change_number():
+    #    st.session_state["rn"] = random.randint(1,100)
+    #    return
 
-    st.button("Génération d'une nouvelle image", on_click=change_number)
-    seed = st.session_state.rn
+    #st.button("Génération d'une nouvelle image", on_click=change_number)
+    
+    seed = st.number_input('choisir un seed', min_value=1, max_value=100)
 
     v1 = st.slider('vecteur propre 1', min_value=1, max_value=10)
     v2 = st.slider('vecteur propre 2', min_value=1, max_value=10)
