@@ -66,14 +66,6 @@ with col1:
     st.markdown(" ")
 
 with col2:
-    if res_init.status_code == 200:
-                ### Display the image returned by the API
-        st.image(res_init.content, caption="Image générée par l'IA ☝️")
-    else:
-        st.markdown("**Oops**, something went wrong 😓 Please try again.")
-        print(res_init.status_code, res_init.content)
-       
-    st.markdown(" ")
     
     if res.status_code == 200:
                 ### Display the image returned by the API
@@ -82,7 +74,12 @@ with col2:
         st.markdown("**Oops**, something went wrong 😓 Please try again.")
         print(res.status_code, res.content)
 
-
+    if res_init.status_code == 200:
+                ### Display the image returned by the API
+        st.image(res_init.content, caption="Image générée par l'IA ☝️")
+    else:
+        st.markdown("**Oops**, something went wrong 😓 Please try again.")
+        print(res_init.status_code, res_init.content)
 with col3:
     st.markdown(" ")
 
